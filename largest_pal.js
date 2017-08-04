@@ -1,13 +1,14 @@
 function findPal(arg,i,j)
 {
     flag = 0;
+    regex = new RegExp("[a-z]");
     while (flag == 0)
     {
-        if (arg[i] != "[a-z]" && arg[i] != undefined)
+        if (regex.test(arg[i]) && arg[i] != undefined)
         {
             i -= 1;
         }
-        else if (arg[j] != "[a-z]" && arg[j] != undefined)
+        else if (regex.test(arg[j]) && arg[j] != undefined)
         {
             j += 1;
         }
